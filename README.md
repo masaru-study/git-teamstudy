@@ -1,6 +1,6 @@
 # git-teamstudy
 
-- git/gitubを学びましょう
+- git/githubを学びましょう
 - 実際に使ってみましょう
 - チームでの開発を体験しましょう
 
