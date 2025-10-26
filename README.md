@@ -64,6 +64,7 @@ ssh-ed25519 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX your_
 
 ## githubに接続確認
 tsukabo-notepc@root:~ $ ssh -T git@github.com
+Hi XXXXXXXX! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 ## gitの基本コマンド
