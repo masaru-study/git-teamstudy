@@ -18,9 +18,9 @@
 ## ssh鍵の作成
 tsukabo-notepc@root:~ $ ssh-keygen -t ed25519 -C "your_email@example.com" // ご自身のメアドで
 Generating public/private ed25519 key pair.
-Enter file in which to save the key (/root/.ssh/id_ed25519):
-Enter passphrase (empty for no passphrase): // 空で
-Enter same passphrase again: // 空で
+Enter file in which to save the key (/root/.ssh/id_ed25519): // 空でEnter
+Enter passphrase (empty for no passphrase): // 空でEnter
+Enter same passphrase again: // 空でEnter
 Your identification has been saved in /root/.ssh/id_ed25519
 Your public key has been saved in /root/.ssh/id_ed25519.pub
 The key fingerprint is:
