@@ -53,7 +53,7 @@ Host github.com
   Hostname github.com
   IdentityFile ~/.ssh/id_ed25519 // ご自身の秘密鍵のパス
 
-## permissionsの設定
+## permissionの設定
 tsukabo-notepc@root:~ $ chmod 600 ~/.ssh/config
 tsukabo-notepc@root:~ $ chmod 600 ~/.ssh/id_ed25519
 
@@ -69,12 +69,12 @@ tsukabo-notepc@root:~ $ ssh -T git@github.com
 ## gitの基本コマンド
 - git init
 - git clone
+- git checkout
 - git add
 - git commit
 - git push
 - git pull
 - git branch
-- git checkout
 - git fetch
 - git merge
 
