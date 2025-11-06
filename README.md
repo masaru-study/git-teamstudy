@@ -82,6 +82,10 @@ Hi XXXXXXXX! You've successfully authenticated, but GitHub does not provide shel
 ## コンフリクト（衝突）を体験しよう
 - AさんとBさんが同じファイルを編集してpushした場合に発生する
 
+## URL
+- https://www.masaru-study.com/
+
+
 ## おまけ
 - 意外と知らない？ Gitコマンド 100本ノック
   - https://qiita.com/ueki05/items/5c233773e3186989bfd3
