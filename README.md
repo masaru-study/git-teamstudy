@@ -12,7 +12,7 @@
 - https://github.com/ よりsign up する
 - MFAはしておくことを推奨します
 
-## 秘密鍵を作ってgithubに登録しよう
+## 公開鍵を作ってgithubに登録しよう
 
 ```bash
 ## ssh鍵の作成
