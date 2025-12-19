@@ -13,17 +13,40 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      ##############
+      # github runner上で、git cloneを実行する
+      ##############
       - uses: actions/checkout@v4
 
+      ##############
+      # github runner上で、AWSにアクセスキーで認証してIAMユーザーでログインする
+      # (ダメな例)
+      ##############
+      # uses: aws-actions/configure-aws-credentials@v1
+      #  with:
+      #    aws-access-key-id: "AKIAIOSFODNN7EXAMPLE"
+      #    aws-secret-access-key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+      #    aws-region: ap-northeast-1
+
+      ##############
+      # github runner上で、AWSにOIDCで認証してIAMロールでログインする
+      # (良い例)
+      ##############
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_IAM_DEPLOY_ROLE }}
           aws-region: ap-northeast-1
 
+      ##############
+      # github runner上で、リポジトリのpublicフォルダをS3にコピーする
+      ##############
       - name: Sync files to S3
         run: aws s3 sync public/ ${{ secrets.AWS_S3_BUCKET }} --delete
 
+      ##############
+      # github runner上で、AWSに命令を出してCDNのキャッシュをクリアする
+      ##############
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
